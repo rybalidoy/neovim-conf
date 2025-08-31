@@ -49,10 +49,5 @@ return {
       filetypes = {"typescript", "javascript", "vue", "json" },
     })
 
-    -- PHP (Laravel)
-    lspconfig.intelephense.setup({
-      capabilitie = capabilities,
-    })
-
   end
 }
