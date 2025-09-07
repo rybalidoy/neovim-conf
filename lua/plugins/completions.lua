@@ -6,9 +6,9 @@ return {
   version = '1.*',
   opts = {
     keymap = {
-      preset = "default", -- ✅ valid value
+      preset = "default",
       ["<CR>"] = { "accept", "fallback" },
-      ["<C-Space>"] = { "show" }, -- ✅ corrected mapping
+      ["<C-Space>"] = { "show" },
       ["<Tab>"] = { "select_next", "fallback" },
       ["<S-Tab>"] = { "select_prev", "fallback" },
     },
