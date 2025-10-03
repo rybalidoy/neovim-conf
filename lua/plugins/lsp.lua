@@ -79,10 +79,12 @@ return {
           require("mason").setup()
 
           require("mason-lspconfig").setup({
-            ensure_installed = {"lua_ls", "eslint", "ts_ls" },
+            ensure_installed = {"lua_ls", "eslint", "ts_ls", "phpactor" },
           })
 
           local lspconfig = require("lspconfig")
+
+          lspconfig.phpactor.setup({})
 
           -- Capabilities for autocomplete (nvim-cmp / blink.cmp)
           local capabilities = vim.lsp.protocol.make_client_capabilities()
