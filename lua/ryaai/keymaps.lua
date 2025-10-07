@@ -4,6 +4,14 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
+-- Normal mode
+vim.keymap.set("n", "<C-.>", ">>", { noremap = true, silent = true, desc = "Indent line" })
+vim.keymap.set("n", "<C-,>", "<<", { noremap = true, silent = true, desc = "Unindent line" })
+
+-- Visual mode
+vim.keymap.set("v", "<C-.>", ">gv", { noremap = true, silent = true, desc = "Indent selection" })
+vim.keymap.set("v", "<C-,>", "<gv", { noremap = true, silent = true, desc = "Unindent selection" })
+
 vim.api.nvim_create_autocmd(
   "LspAttach",
   { 
